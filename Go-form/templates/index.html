@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        method="post" kullanarak form verileri istek gövdesinde gönderilir.
+        Bu, verilerin URL'de görünmeyeceği anlamına gelir ve bu, hassas bilgiler için daha güvenlidir.
+    -->
+    <!-- 
+        method="get" kullanarak form verileri URL parametreleri olarak gönderilir.
+        Bu, verilerin URL'ye eklenmesi ve görünür olması anlamına gelir, bu nedenle daha az güvenlidir.
+        Örneğin, URL şu şekilde görünebilir: http://localhost:8000/login?Kullanici_adi=Berkay&Kullanici_sifre=123&Kullanici_sifre=Giri%C5%9F
+    -->
+    <form action="/login" method="get">
+        <label for="Kullanici_adi">Kullanici Adi : </label>
+        <input type="text" name="Kullanici_adi" id="k_ad" placeholder="Kullanici adiniz giriniz">
+        <label for="Kullanici_sifre">Kullanici Şifre : </label>
+        <input type="text" name="Kullanici_sifre" id="k_sifre" placeholder="Kullanici sifrenizi giriniz">
+        <input type="submit" name="Kullanici_sifre" value="Giriş">
+    </form>
+
+</body>
+
+</html>
